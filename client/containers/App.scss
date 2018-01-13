@@ -1,0 +1,50 @@
+/* styleguide */
+
+input,
+button {
+	line-height: 30px;
+	height: 30px;
+	vertical-align: middle;
+	box-sizing: border-box;
+	padding: 0 10px;
+	box-shadow: none;
+	outline: none;
+	font-size: 14px;
+}
+
+button {
+	background: #eee;
+	border: none;
+	cursor: pointer;
+}
+
+/* layout */
+
+.app {
+	text-align: center;
+	margin: 100px 0 0 0;
+	font-size: 14px;
+	font-family: 'Open Sans'
+}
+
+/* components */
+
+.stocks {
+	margin: 20px;
+}
+
+a.stock {
+	line-height: 30px;
+	height: 30px;
+	padding: 0 10px;
+	margin: 0 10px 0 0;
+	display: inline-block;
+	background: #eee;
+	cursor: pointer;
+	color: black;
+	text-decoration: none;
+
+	&.selected {
+		background: orange;
+	}
+}

@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cn from 'classnames';
+import { Link } from 'react-router-dom';
 
-const Stock = ({id, name, selected, actions}) => (
-  <span
-    onClick={()=>actions.selectStock(id)}
-    style={{
-      color: selected ? 'green' : 'black'
-    }}
+const Stock = ({id, name, selected, actions}) => ( 
+  <Link
+    className={cn('stock', {selected})}
+    to={`/${id}`}
   >
     {name}
-  </span>
+  </Link>
 )
 
 Stock.propTypes = {

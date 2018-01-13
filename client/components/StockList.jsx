@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Stock from './Stock.jsx'
 
 const StockList = ({ stocks, actions }) => (
-  <div>
+  <div className="stocks">
     {stocks.map(stock =>
       <Stock
         key={stock.id}
@@ -16,7 +16,7 @@ const StockList = ({ stocks, actions }) => (
 
 StockList.propTypes = {
   stocks: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     active: PropTypes.bool,
     name: PropTypes.string.isRequired
   }).isRequired).isRequired,

@@ -1,17 +1,20 @@
-const products = (state = [], action) => {
+const initialState = {
+  byId: {},
+  allIds: []
+};
+
+const products = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_PRODUCT':
-      return [
-        ...state,
-        {
-          id: product.id,
-          name: action.name,
-          quantity: action.quantity
-        }
-      ]
-    case 'REMOVE_PRODUCT':
-      return state;
-    default:
+      return {
+        allIds: [...state.allIds, action.productId],
+        byId: {...state.byId, [action.productId]: {
+            id: action.productId,
+            name: action.name
+          }
+        } 
+      };
+     default:
       return state;
   }
 }

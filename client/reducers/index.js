@@ -1,12 +1,9 @@
-import { combineReducers } from 'redux';
 import products from './products';
 import stocks from './stocks';
 import stocksFilter from './stocksFilter';
 
-const stockApp = combineReducers({
-  products,
+export default {
+	 products,
   stocks,
   stocksFilter
-});
-
-export default stockApp;
+};

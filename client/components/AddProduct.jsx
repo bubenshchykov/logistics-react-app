@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { v4 } from 'uuid';
 
-const AddStock = ({addStock}) => {
+const AddProduct = ({addProduct, selectedStockId}) => {
   let input;
 
  return (
@@ -13,22 +13,22 @@ const AddStock = ({addStock}) => {
       if (!input.value.trim()) {
         return
       }
-      addStock(input.value, v4());
+      addProduct(input.value, v4(), selectedStockId);
       input.value = ''
     }}>
       <input ref={node => {
         input = node
       }} />
       <button type="submit">
-        Add Stock
+        Add Product
       </button>
     </form>
   </div>
 )
 };
 
-AddStock.propTypes = {
-  addStock: PropTypes.func.isRequired
+AddProduct.propTypes = {
+  addProduct: PropTypes.func.isRequired
 };
 
-export default AddStock;
+export default AddProduct;
