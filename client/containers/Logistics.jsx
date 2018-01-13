@@ -8,8 +8,6 @@ import AddProduct from '../components/AddProduct.jsx'
 import ProductList from '../components/ProductList.jsx'
 import * as StockActions from '../actions'
 
-import './App.scss';
-
 const App = ({stocks, products, actions, selectedStockId}) => (
   <div className="app">
     <AddStock addStock={actions.addStock} />

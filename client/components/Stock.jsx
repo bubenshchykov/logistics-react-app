@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Stock = ({id, name, selected, actions}) => ( 
   <Link
     className={cn('stock', {selected})}
-    to={`/${id}`}
+    to={`/stocks/${id}`}
   >
     {name}
   </Link>

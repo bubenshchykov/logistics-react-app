@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/App.jsx';
+import App from './components/App.jsx';
+import About from './components/About.jsx';
+import Logistics from './containers/Logistics.jsx';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -24,7 +26,10 @@ const render = () => ReactDOM.render(
 	<Provider store={store}>
 		<AppContainer>
 			<Router>
-			    <Route path="/:stock?" component={App} />
+				<App>
+					<Route path="/stocks/:stock?" component={Logistics} />
+			    	<Route path="/about" component={About} />
+			    </App>
 			 </Router>
     	</AppContainer>
 	</Provider>,
@@ -33,8 +38,8 @@ const render = () => ReactDOM.render(
 render();
 
 if (module.hot) {
-	module.hot.accept('./containers/App.jsx', () => {
-	  render(require('./containers/App.jsx').default);
+	module.hot.accept('./components/App.jsx', () => {
+	  render(require('./components/App.jsx').default);
 	});
 	module.hot.accept('./reducers', () => {
       store.replaceReducer(reducer);
