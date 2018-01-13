@@ -2,22 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import AddStock from '../components/AddStock.jsx'
-import StockList from '../components/StockList.jsx'
-import AddProduct from '../components/AddProduct.jsx'
-import ProductList from '../components/ProductList.jsx'
-import * as StockActions from '../actions'
+import AddStock from '../components/AddStock.jsx';
+import StockList from '../components/StockList.jsx';
+import AddProduct from '../components/AddProduct.jsx';
+import ProductList from '../components/ProductList.jsx';
+import * as StockActions from '../actions';
 
 const App = ({stocks, products, actions, selectedStockId}) => (
   <div className="app">
     <AddStock addStock={actions.addStock} />
     <StockList stocks={stocks} actions={actions} />
-    <h2>Products</h2>
+    <h2>Stock products</h2>
     <AddProduct addProduct={actions.addProduct} 
       selectedStockId={selectedStockId} />
     <ProductList products={products}/>
   </div>
-)
+);
 
 App.propTypes = {
   stocks: PropTypes.array.isRequired,
@@ -46,4 +46,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(App);

@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 
 const AddProduct = ({addProduct, selectedStockId}) => {
@@ -18,7 +18,8 @@ const AddProduct = ({addProduct, selectedStockId}) => {
     }}>
       <input ref={node => {
         input = node
-      }} />
+      }} 
+        placeholder="Product name" />
       <button type="submit">
         Add Product
       </button>

@@ -24,7 +24,10 @@ const stocks = (state = initialState, action) => {
         } 
       };
     case 'ADD_PRODUCT':
-      return dotProp.set(state, `byId.${action.stockId}.products`, products => [...products, action.productId]);
+      return dotProp.set(
+        state,
+        `byId.${action.stockId}.products`,
+        products => [...products, action.productId]);
     default:
       return state;
   }

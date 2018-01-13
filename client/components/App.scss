@@ -20,11 +20,44 @@ button {
 
 /* layout */
 
+body {
+	margin: 0;
+}
+
 .app {
-	text-align: center;
-	margin: 100px 0 0 0;
 	font-size: 14px;
-	font-family: 'Open Sans'
+	font-family: 'Open Sans';
+
+	&-nav {
+		width: 100%;
+		display: flex;
+		
+		&-link {
+			line-height: 50px;
+			height: 50px;
+			flex: 1;
+			text-align: center;
+			font-size: 18px;
+			text-decoration: none;
+			color: black;
+			border-left: 1px solid #ddd;
+			background: #eee;
+
+			&-first-child {
+				border-left: none;
+			}
+
+			&:hover,
+			&.active {
+				background: orange;
+			}
+		}
+	}
+
+	&-page {
+		padding: 30px;
+		text-align: center;
+	}
 }
 
 /* components */
@@ -44,7 +77,7 @@ a.stock {
 	color: black;
 	text-decoration: none;
 
-	&.selected {
-		background: orange;
+	&.active {
+		background: #cddc39;
 	}
 }

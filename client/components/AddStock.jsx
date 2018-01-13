@@ -18,7 +18,9 @@ const AddStock = ({addStock}) => {
     }}>
       <input ref={node => {
         input = node
-      }} />
+      }} 
+        placeholder="Stock name"
+      />
       <button type="submit">
         Add Stock
       </button>

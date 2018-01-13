@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Stock from './Stock.jsx'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Stock from './Stock.jsx';
 
 const StockList = ({ stocks, actions }) => (
   <div className="stocks">
