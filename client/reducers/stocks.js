@@ -1,14 +1,14 @@
-var dotProp = require('dot-prop-immutable');
+const dotProp = require('dot-prop-immutable');
 
 const initialState = {
   byId: {
-    'default': {
+    default: {
       id: 'default',
       name: 'Main',
-      products: []
-    }
+      products: [],
+    },
   },
-  allIds: ['default']
+  allIds: ['default'],
 };
 
 const stocks = (state = initialState, action) => {
@@ -16,21 +16,24 @@ const stocks = (state = initialState, action) => {
     case 'ADD_STOCK':
       return {
         allIds: [...state.allIds, action.id],
-        byId: {...state.byId, [action.id]: {
+        byId: {
+          ...state.byId,
+          [action.id]: {
             id: action.id,
             name: action.name,
-            products: []
-          }
-        } 
+            products: [],
+          },
+        },
       };
     case 'ADD_PRODUCT':
       return dotProp.set(
         state,
         `byId.${action.stockId}.products`,
-        products => [...products, action.productId]);
+        products => [...products, action.productId],
+      );
     default:
       return state;
   }
-}
+};
 
 export default stocks;

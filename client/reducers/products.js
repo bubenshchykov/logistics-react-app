@@ -1,6 +1,6 @@
 const initialState = {
   byId: {},
-  allIds: []
+  allIds: [],
 };
 
 const products = (state = initialState, action) => {
@@ -8,15 +8,17 @@ const products = (state = initialState, action) => {
     case 'ADD_PRODUCT':
       return {
         allIds: [...state.allIds, action.productId],
-        byId: {...state.byId, [action.productId]: {
+        byId: {
+          ...state.byId,
+          [action.productId]: {
             id: action.productId,
-            name: action.name
-          }
-        } 
+            name: action.name,
+          },
+        },
       };
-     default:
+    default:
       return state;
   }
-}
+};
 
 export default products;

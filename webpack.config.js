@@ -13,13 +13,16 @@ module.exports = {
   entry: [
      'react-hot-loader/patch',
     'webpack-hot-middleware/client',
-    './client/index.js'
+    './client/index.jsx'
   ],
   output: {
     path: path.resolve('dist'),
     filename: 'index_bundle.js'
   },
   devtool: 'cheap-module-eval-source-map',
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     HtmlWebpackPluginConfig
@@ -27,7 +30,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loaders: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.jsx?$/, loaders: 'babel-loader', exclude: /node_modules/ },
       { test: /\.scss$/, loaders: ["style-loader","css-loader","sass-loader"] }
     ]
   }

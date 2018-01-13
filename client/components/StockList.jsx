@@ -1,26 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Stock from './Stock.jsx';
 
-const StockList = ({ stocks, actions }) => (
+import Stock from './Stock';
+
+const StockList = ({ stocks }) => (
   <div className="stocks">
     {stocks.map(stock =>
-      <Stock
+      (<Stock
         key={stock.id}
         {...stock}
-        actions={actions}
-      />
-    )}
+      />))}
   </div>
-)
+);
 
 StockList.propTypes = {
   stocks: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     active: PropTypes.bool,
-    name: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
   }).isRequired).isRequired,
-  actions: PropTypes.object.isRequired
-}
+};
 
-export default StockList
+export default StockList;

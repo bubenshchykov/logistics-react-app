@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { NavLink } from 'react-router-dom';
 
-const Stock = ({id, name, selected, actions}) => ( 
+const Stock = ({
+  id,
+  name,
+  selected,
+}) => (
   <NavLink
-    className={cn('stock', {active: selected})}
+    className={cn('stock', { active: selected })}
     to={`/stocks/${id}`}
   >
     {name}
@@ -13,9 +17,13 @@ const Stock = ({id, name, selected, actions}) => (
 );
 
 Stock.propTypes = {
-  actions: PropTypes.object.isRequired,
+  id: PropTypes.string.isRequired,
   selected: PropTypes.bool,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+};
+
+Stock.defaultProps = {
+  selected: false,
 };
 
 export default Stock;
