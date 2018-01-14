@@ -9,6 +9,8 @@ yarn install
 yarn start
 ```
 
+![Logistics](https://media.giphy.com/media/13ofcTggHtvOEg/giphy.gif)
+
 ## Techs
 
 ### Core
@@ -32,7 +34,6 @@ yarn start
 ### Dev tools
 * [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=ru) - must-have browser extension when using redux
 * [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) and [react-hot-loader](https://github.com/gaearon/react-hot-loader) - hot code reload
-
 
 ## Work in progress
 * save data to api
