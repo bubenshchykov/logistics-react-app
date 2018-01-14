@@ -1,7 +1,11 @@
 {
-  "name": "stock-react-example",
+  "name": "logistics-react-app",
   "version": "1.0.0",
   "description": "stock demo with react-router-redux",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bubenshchykov/logistics-react-app.git"
+  },
   "main": "index.js",
   "author": "bubenshchykov",
   "license": "MIT",
