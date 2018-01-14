@@ -1,4 +1,4 @@
-# Stocks & Products - react ecosystem app ![Build Status](https://img.shields.io/travis/bubenshchykov/logistics-react-app/master.svg)](https://travis-ci.org/bubenshchykov/logistics-react-app)
+# Stocks & Products - react ecosystem app [![Build Status](https://img.shields.io/travis/bubenshchykov/logistics-react-app/master.svg)](https://travis-ci.org/bubenshchykov/logistics-react-app)
 
 A prototype of Logistics app. You can create stocks, products, and distribute products between stocks - as simple as that.
 
@@ -34,8 +34,7 @@ yarn start
 * [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) and [react-hot-loader](https://github.com/gaearon/react-hot-loader) - hot code reload
 
 
-=== 
-Work in progress:
+## Work in progress
 * save data to api
 * offline mode support
 * turn into Progressive [Web App](https://developers.google.com/web/progressive-web-apps/)
