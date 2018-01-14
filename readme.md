@@ -18,9 +18,10 @@ yarn start
 * [react-router-dom](https://www.npmjs.com/package/react-router-dom) - routing
 
 ### App state 
-* [redux](https://redux.js.org/) and [react-redux](https://github.com/reactjs/react-redux) - app state management and uni-directional data flow
-* [normalized data](https://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html) - pattern for oranizing nested reletional data
+* [redux](https://redux.js.org/) and [react-redux](https://github.com/reactjs/react-redux) - app state management and unidirectional data flow
+* [normalized data](https://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html) - pattern for oranizing nested relational data
 * [redux-persist](https://github.com/rt2zz/redux-persist) - for storing and rehydrating app state (for now, in localStorage)
+* [dot-prop-immutable](https://github.com/debitoor/dot-prop-immutable) - sweet helper for immutable state changes
 
 ### Bundling
 * [webpack](https://webpack.github.io/) - quick and nice js, jsx and sass bundling
