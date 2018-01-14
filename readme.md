@@ -36,7 +36,8 @@ yarn start
 * [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) and [react-hot-loader](https://github.com/gaearon/react-hot-loader) - hot code reload
 
 ## Work in progress
-* save data to api
-* offline mode support
-* turn into Progressive [Web App](https://developers.google.com/web/progressive-web-apps/)
-* tests 
+- [ ] save data to api
+- [ ] offline mode support
+- [ ] host on gh-pages
+- [ ] turn into [Progressive Web App](https://developers.google.com/web/progressive-web-apps/)
+- [ ] tests 
