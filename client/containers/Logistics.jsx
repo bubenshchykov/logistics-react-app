@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import AddStock from '../components/AddStock';
 import StockList from '../components/StockList';
 import AddProduct from '../components/AddProduct';
 import ProductList from '../components/ProductList';
-import * as StockActions from '../actions';
+import { addProduct, addStock} from '../actions';
 
 const App = ({
   stocks,
@@ -58,11 +57,7 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = dispatch => ({
-  ...bindActionCreators(StockActions, dispatch),
-});
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  { addProduct, addStock },
 )(App);

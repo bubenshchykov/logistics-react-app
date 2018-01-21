@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { persistStore, persistCombineReducers } from 'redux-persist';
+import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { AppContainer } from 'react-hot-loader';
 
@@ -13,7 +13,7 @@ import Logistics from './containers/Logistics';
 import devTools from './devTools';
 import appReducer from './reducers';
 
-const reducer = persistCombineReducers({ key: 'v0', storage }, appReducer);
+const reducer = persistReducer({ key: 'v0', storage }, appReducer);
 const store = createStore(reducer, devTools.storeEnhancer);
 persistStore(store);
 const root = document.getElementById('root');

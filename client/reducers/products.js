@@ -1,24 +1,31 @@
-const initialState = {
-  byId: {},
-  allIds: [],
+import { combineReducers } from 'redux';
+import { ADD_PRODUCT } from '../actions';
+
+const allIds = (state = [], action) => {
+  switch (action.type) {
+    case ADD_PRODUCT:
+      return [...state, action.productId];
+    default:
+      return state;
+  }
 };
 
-const products = (state = initialState, action) => {
+const byId = (state = {}, action) => {
   switch (action.type) {
-    case 'ADD_PRODUCT':
+    case ADD_PRODUCT:
       return {
-        allIds: [...state.allIds, action.productId],
-        byId: {
-          ...state.byId,
+          ...state,
           [action.productId]: {
             id: action.productId,
             name: action.name,
-          },
-        },
+          }
       };
     default:
       return state;
   }
 };
 
-export default products;
+export default combineReducers({
+    byId,
+    allIds
+});
