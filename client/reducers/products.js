@@ -14,11 +14,11 @@ const byId = (state = {}, action) => {
   switch (action.type) {
     case ADD_PRODUCT:
       return {
-          ...state,
-          [action.productId]: {
-            id: action.productId,
-            name: action.name,
-          }
+        ...state,
+        [action.productId]: {
+          id: action.productId,
+          name: action.name,
+        },
       };
     default:
       return state;
@@ -26,6 +26,6 @@ const byId = (state = {}, action) => {
 };
 
 export default combineReducers({
-    byId,
-    allIds
+  byId,
+  allIds,
 });

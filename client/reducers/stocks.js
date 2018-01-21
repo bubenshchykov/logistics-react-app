@@ -1,4 +1,4 @@
-const dotProp = require('dot-prop-immutable');
+import dotProp from 'dot-prop-immutable';
 import { combineReducers } from 'redux';
 import { ADD_STOCK, ADD_PRODUCT } from '../actions';
 
@@ -16,7 +16,7 @@ const byId = (state = {
     id: 'default',
     name: 'Main',
     products: [],
-  }
+  },
 }, action) => {
   switch (action.type) {
     case ADD_STOCK:
@@ -26,7 +26,7 @@ const byId = (state = {
           id: action.id,
           name: action.name,
           products: [],
-        }
+        },
       };
     case ADD_PRODUCT:
       return dotProp.set(
@@ -40,6 +40,6 @@ const byId = (state = {
 };
 
 export default combineReducers({
-    byId,
-    allIds
+  byId,
+  allIds,
 });

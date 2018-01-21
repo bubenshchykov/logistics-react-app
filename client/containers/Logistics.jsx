@@ -6,7 +6,7 @@ import AddStock from '../components/AddStock';
 import StockList from '../components/StockList';
 import AddProduct from '../components/AddProduct';
 import ProductList from '../components/ProductList';
-import { addProduct, addStock} from '../actions';
+import * as actions from '../actions';
 
 const App = ({
   stocks,
@@ -59,5 +59,5 @@ const mapStateToProps = (state, ownProps) => {
 
 export default connect(
   mapStateToProps,
-  { addProduct, addStock },
+  actions,
 )(App);
